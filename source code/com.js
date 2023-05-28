@@ -1,4 +1,3 @@
-
 let input1 = document.getElementById("input1");
 let input2 = document.getElementById("input2");
 let compare = document.getElementsByClassName("fight")[0];
@@ -10,8 +9,6 @@ var follower1;
 var follower2;
 
 compare.addEventListener("click", () => {
- 
-  
   fetch(`https://api.github.com/users/${input1.value}`)
     .then((res) => res.json())
     .then((data) => {
@@ -48,107 +45,73 @@ compare.addEventListener("click", () => {
               "result : Winner";
             document.getElementsByClassName("result")[0].innerHTML =
               "result : Loser";
-              document
-                .getElementsByClassName("card")[1]
-                .setAttribute("style", "background-color :#c5e8b7");
-              document
-                .getElementsByClassName("card")[0]
-                .setAttribute("style", "background-color :#f07470");
+            document
+              .getElementsByClassName("card")[1]
+              .setAttribute("style", "background-color :#c5e8b7");
+            document
+              .getElementsByClassName("card")[0]
+              .setAttribute("style", "background-color :#f07470");
           } else if (repo1 > repo2) {
             document.getElementsByClassName("result")[0].innerHTML =
               "result : Winner";
             document.getElementsByClassName("result")[1].innerHTML =
               "result : Loser";
-              document
-                .getElementsByClassName("card")[0]
-                .setAttribute("style", "background-color :#c5e8b7");
-              document
-                .getElementsByClassName("card")[1]
-                .setAttribute("style", "background-color :#f07470");
+            document
+              .getElementsByClassName("card")[0]
+              .setAttribute("style", "background-color :#c5e8b7");
+            document
+              .getElementsByClassName("card")[1]
+              .setAttribute("style", "background-color :#f07470");
           } else if (repo1 == repo2) {
             if (follower2 > follower1) {
               document.getElementsByClassName("result")[1].innerHTML =
                 "result : Winner";
               document.getElementsByClassName("result")[0].innerHTML =
                 "result : Loser";
-                document
-                  .getElementsByClassName("card")[1]
-                  .setAttribute("style", "background-color :#c5e8b7");
-                document
-                  .getElementsByClassName("card")[0]
-                  .setAttribute("style", "background-color :#f07470");
+              document
+                .getElementsByClassName("card")[1]
+                .setAttribute("style", "background-color :#c5e8b7");
+              document
+                .getElementsByClassName("card")[0]
+                .setAttribute("style", "background-color :#f07470");
             } else if (follower1 > follower2) {
               document.getElementsByClassName("result")[0].innerHTML =
                 "result : Winner";
               document.getElementsByClassName("result")[1].innerHTML =
                 "result : Loser";
-                document
-                  .getElementsByClassName("card")[0]
-                  .setAttribute("style", "background-color :#c5e8b7");
-                document
-                  .getElementsByClassName("card")[1]
-                  .setAttribute("style","background-color :#f07470");
+              document
+                .getElementsByClassName("card")[0]
+                .setAttribute("style", "background-color :#c5e8b7");
+              document
+                .getElementsByClassName("card")[1]
+                .setAttribute("style", "background-color :#f07470");
             } else if (follower1 == follower2) {
               document.getElementsByClassName("result")[0].innerHTML =
                 "result : Draw";
               document.getElementsByClassName("result")[1].innerHTML =
                 " result : Draw";
-                document
-                  .getElementsByClassName("card")[1]
-                  .setAttribute("style", "background-color :#f2f2ae");
-                document
-                  .getElementsByClassName("card")[0]
-                  .setAttribute("style", "background-color :#f2f2ae");
+              document
+                .getElementsByClassName("card")[1]
+                .setAttribute("style", "background-color :#f2f2ae");
+              document
+                .getElementsByClassName("card")[0]
+                .setAttribute("style", "background-color :#f2f2ae");
             }
           }
-        
-               document.getElementsByClassName("card")[1].style.color ="#24292f";
-               document.getElementsByClassName("card")[0].style.color ="#24292f";
-      
+
+          document.getElementsByClassName("card")[1].style.color = "#24292f";
+          document.getElementsByClassName("card")[0].style.color = "#24292f";
         });
     });
+});
 
-
-
-  });
-
-document.getElementById("hum").addEventListener("click",()=>{
-if(document.getElementsByClassName("links")[0].style.display == "none"){
-document.getElementsByClassName("links")[0].style.display = "flex";
-}
-else{
-   document.getElementsByClassName("links")[0].style.display = "none"; 
-}});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+document.getElementById("hum").addEventListener("click", () => {
+  if (document.getElementsByClassName("links")[0].style.display == "none") {
+    document.getElementsByClassName("links")[0].style.display = "flex";
+  } else {
+    document.getElementsByClassName("links")[0].style.display = "none";
+  }
+});
 
 // let input1 = document.getElementById("input1");
 // let input2 = document.getElementById("input2");
@@ -159,7 +122,6 @@ else{
 // var repo2;
 // var follower1;
 // var follower2;
-
 
 // compare.addEventListener("click",()=>{
 // fetch(`https://api.github.com/users/${input1.value}`)
@@ -213,7 +175,4 @@ else{
 // }
 // }
 
-
-
 // })
-
